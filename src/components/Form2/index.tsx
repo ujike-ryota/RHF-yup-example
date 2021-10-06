@@ -1,24 +1,27 @@
-import * as Ant from "antd";
+import Operation from "antd/lib/transfer/operation";
 
 export const Form2 = () => {
   return (
-    <Ant.Form>
-      <Ant.Form.Item label="好きな食べ物">
-        <Ant.Input />
-      </Ant.Form.Item>
-      <Ant.Form.Item label="好きな偶数(2つまで)">
-        <Ant.Checkbox.Group>
+    <div>
+      <div>
+        <label>
+          好きな食べ物:
+          <input name="food" />
+        </label>
+      </div>
+      <div>
+        好きな偶数(2つまで)
+        <select>
           {[...Array(10)].map(
             (_, i) =>
               !(i % 2) && (
-                <Ant.Checkbox key={i} value={i}>
+                <option key={i} value={i}>
                   {i}
-                </Ant.Checkbox>
+                </option>
               )
           )}
-          <Ant.Checkbox value={11}>11</Ant.Checkbox>
-        </Ant.Checkbox.Group>
-      </Ant.Form.Item>
-    </Ant.Form>
+        </select>
+      </div>
+    </div>
   );
 };

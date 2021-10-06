@@ -1,18 +1,35 @@
 import type { NextPage } from "next";
-import * as Ant from "antd";
-import { Form1 } from "../components/Form1";
-import { Form2 } from "../components/Form2";
 
 const Home: NextPage = () => {
   return (
     <div style={{ textAlign: "center", marginTop: "100px" }}>
-      <Ant.Space direction="vertical">
-        <Ant.Typography.Title level={2}>フォーム</Ant.Typography.Title>
-        <Ant.Divider />
-        <Form1 />
-        <Ant.Divider />
-        <Form2 />
-      </Ant.Space>
+      <h1>フォーム</h1>
+      <hr />
+      <form>
+        <div>
+          <label>
+            お名前:
+            <input />
+          </label>
+        </div>
+        <div>
+          性別:
+          <input type="radio" id="male" name="gender" value="male" />
+          <label htmlFor="male">男</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label htmlFor="female">女</label>
+          <input type="radio" id="other" name="gender" value="other" />
+          <label htmlFor="other">その他</label>
+        </div>
+        <div>
+          <label>
+            年齢:
+            <input name="age" />歳
+          </label>
+        </div>
+        <hr />
+        <input type="submit" />
+      </form>
     </div>
   );
 };
