@@ -1,4 +1,12 @@
 import * as Ant from "antd";
+import { useFormContext } from "react-hook-form";
+import * as yup from "yup";
+
+export const Form1Validation = {
+  name: yup.string().required(),
+  gender: yup.string().required(),
+  age: yup.number().positive().integer().required(),
+};
 
 export const AntForm1 = () => {
   return (

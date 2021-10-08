@@ -47,26 +47,13 @@ const Home: NextPage = () => {
         </div>
         <div>
           性別:
-          <input
-            type="radio"
-            id="male"
-            name="gender"
-            value="男"
-            {...register("gender")}
-          />
+          <input type="radio" id="male" value="男" {...register("gender")} />
           <label htmlFor="male">男</label>
-          <input
-            type="radio"
-            id="female"
-            name="gender"
-            value="女"
-            {...register("gender")}
-          />
+          <input type="radio" id="female" value="女" {...register("gender")} />
           <label htmlFor="female">女</label>
           <input
             type="radio"
             id="other"
-            name="gender"
             value="その他"
             {...register("gender")}
           />
@@ -82,11 +69,11 @@ const Home: NextPage = () => {
         </div>
         <hr />
         <input type="submit" />
-        <hr />
-        <p>名前: {submitData.name ?? submitData.name}</p>
-        <p>性別: {submitData.gender ?? submitData.gender}</p>
-        <p>年齢: {submitData.age ?? submitData.age}歳</p>
       </form>
+      <hr />
+      <p>名前: {submitData.name ?? submitData.name}</p>
+      <p>性別: {submitData.gender ?? submitData.gender}</p>
+      <p>年齢: {submitData.age ?? submitData.age}歳</p>
     </div>
   );
 };

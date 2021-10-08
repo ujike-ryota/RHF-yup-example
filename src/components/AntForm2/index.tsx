@@ -1,4 +1,14 @@
 import * as Ant from "antd";
+import { useFormContext } from "react-hook-form";
+import * as yup from "yup";
+
+export const Form2Validation = {
+  favoriteFood: yup.string().nullable(),
+  favoriteEvenNumber: yup
+    .array()
+    .min(1)
+    .transform((value) => value ?? []),
+};
 
 export const AntForm2 = () => {
   return (
